@@ -50,12 +50,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 
 }
 
@@ -65,14 +67,14 @@ body {
     line-height: 1.6;
     font-size: 16px;
     transition: background-color var(--transition-normal), color var(--transition-normal);
+
 }
 
 code, pre {
     font-family: 'SF Mono', 'Geist Mono', 'Monaco', 'Consolas', monospace;
 }
-main{
-    overflow: hidden;
-}
+
+main {}
 
 /* ================================
    ACCESSIBILITY & UTILITIES
@@ -774,6 +776,7 @@ nav {
     text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
 }
 
 .movie-card img {
@@ -1265,6 +1268,7 @@ footer {
    RESPONSIVE DESIGN
 ================================ */
 @media (max-width: 768px) {
+
     nav {
         padding: 1rem;
         height: auto;
@@ -1334,11 +1338,12 @@ footer {
         text-align: center;
     }
 
-    .OCM{
+    .OCM {
         border: 2px solid black;
         width: 4rem;
     }
-     .modal {
+
+    .modal {
         padding: 1rem;
     }
 
