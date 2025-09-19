@@ -1331,7 +1331,11 @@ footer {
         text-align: center;
     }
 
-    .modal {
+    .OCM{
+        border: 2px solid black;
+        width: 4rem;
+    }
+     .modal {
         padding: 1rem;
     }
 
