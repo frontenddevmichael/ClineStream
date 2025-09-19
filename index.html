@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Meta -->
+    <title>ClineVault - Discover Premium Movies | ClineStream Studios</title>
+    <meta name="description"
+        content="Discover and explore premium movies with ClineVault. Your curated destination for cinema excellence from ClineStream Studios.">
+    <meta name="keywords" content="movies, cinema, streaming, film database, movie collection">
+    <meta name="author" content="OCM - ClineStream Studios">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ClineVault - Discover Premium Movies">
+    <meta property="og:description" content="Your curated destination for cinema excellence">
+    <meta property="og:image" content="https://your-domain.com/og-image.jpg">
+    <meta property="og:url" content="https://your-domain.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClineVault - Discover Premium Movies">
+    <meta name="twitter:description" content="Your curated destination for cinema excellence">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#007aff">
+    <meta name="msapplication-TileColor" content="#007aff">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100..900&family=Geist+Mono:wght@100..900&display=swap">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ClineVault",
+        "description": "Discover and explore premium movies",
+        "url": "https://your-domain.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://your-domain.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading ClineVault...</p>
+    </div>
+
+    <!-- Header -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="logo">
+                <h1>ClineVault</h1>
+                <span class="tagline">by ClineStream Studios</span>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Enhanced Search -->
+                <div class="search-container" role="search">
+                    <label for="search-input" class="visually-hidden">Search movies</label>
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" role="img">
+                            <title>Search icon</title>
+                            <g>
+                                <path
+                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                                </path>
+                            </g>
+                        </svg>
+                        <input id="search-input" placeholder="Search movies..." type="search" class="input"
+                            autocomplete="off" aria-describedby="search-help">
+                        <div id="search-help" class="visually-hidden">Search through our movie collection</div>
+                    </div>
+
+                    <!-- Search Results Dropdown -->
+                    <div id="search-results" class="search-results" role="listbox" aria-hidden="true"></div>
+                </div>
+
+                <!-- Filter Dropdown -->
+                <div class="filter-container">
+                    <button id="filter-btn" class="filter-btn" aria-expanded="false" aria-haspopup="true">
+                        <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z" />
+                        </svg>
+                        Filter
+                    </button>
+                    <div id="filter-dropdown" class="filter-dropdown" role="menu">
+                        <div class="filter-section">
+                            <h4>Genre</h4>
+                            <label><input type="checkbox" value="action"> Action</label>
+                            <label><input type="checkbox" value="drama"> Drama</label>
+                            <label><input type="checkbox" value="sci-fi"> Sci-Fi</label>
+                            <label><input type="checkbox" value="comedy"> Comedy</label>
+                        </div>
+                        <div class="filter-section">
+                            <h4>Year</h4>
+                            <select id="year-filter">
+                                <option value="">All Years</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle -->
+                <label class="ui-switch">
+                    <input type="checkbox">
+                    <div class="slider">
+                        <div class="circle"></div>
+                    </div>
+                </label>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero-section" aria-labelledby="hero-title">
+            <h1 id="hero-title" class="hero-title">Discover Cinema Excellence</h1>
+            <p class="hero-subtitle">Stream thousands of movies from every genre. Find hidden gems, revisit classics,
+                and discover new releases.
+            </p>
+        </section>
+
+        <!-- Sort Controls -->
+        <section class="controls-section" aria-label="Sort and view controls">
+            <div class="sort-controls">
+                <label for="sort-select" class="sort-label">Sort by:</label>
+                <select id="sort-select" class="sort-select">
+                    <option value="title">Title A-Z</option>
+                    <option value="year">Year (Newest)</option>
+                    <option value="rating">Rating (Highest)</option>
+                    <option value="genre">Genre</option>
+                </select>
+            </div>
+
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active" aria-label="Grid view" title="Grid view">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M3 3v8h8V3H3zm6 6H5V5h4v4zm-6 4v8h8v-8H3zm6 6H5v-4h4v4zm4-16v8h8V3h-8zm6 6h-4V5h4v4zm-6 4v8h8v-8h-8zm6 6h-4v-4h4v4z" />
+                    </svg>
+                </button>
+                <button id="list-view" class="view-btn" aria-label="List view" title="List view">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Movies Grid -->
+        <section class="movies-section" aria-labelledby="movies-heading">
+            <h2 id="movies-heading" class="visually-hidden">Movie Collection</h2>
+
+            <!-- Loading State -->
+            <div id="movies-loading" class="movies-loading" aria-hidden="true">
+                <div class="loading-cards">
+                    <div class="loading-card"></div>
+                    <div class="loading-card"></div>
+                    <div class="loading-card"></div>
+                    <div class="loading-card"></div>
+                </div>
+            </div>
+
+            <!-- Movies Container -->
+            <div id="moviesGrid" class="movies-grid" role="list" aria-live="polite">
+                <!-- JS will inject movie cards here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state" aria-hidden="true">
+                <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <h3>No movies found</h3>
+                <p>Try adjusting your search or filters</p>
+                <button id="clear-filters" class="clear-btn">Clear all filters</button>
+            </div>
+        </section>
+
+        <!-- Load More Button -->
+        <section class="load-more-section">
+            <button id="load-more" class="load-more-btn" aria-describedby="load-more-help">
+                Load More Movies
+                <svg class="load-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </button>
+            <div id="load-more-help" class="visually-hidden">Load additional movies to the collection</div>
+        </section>
+    </main>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3>ClineVault</h3>
+                    <p>Your curated destination for cinema excellence</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#" aria-label="Browse all movies">All Movies</a></li>
+                            <li><a href="#" aria-label="Browse by genres">Genres</a></li>
+                            <li><a href="#" aria-label="View new releases">New Releases</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#" aria-label="About us">About</a></li>
+                            <li><a href="#" aria-label="Contact us">Contact</a></li>
+                            <li><a href="#" aria-label="Privacy policy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ClineStream Studios | Built with ❤️ by OCM</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Follow us on Twitter" title="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Follow us on GitHub" title="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for movie details -->
+    <div id="movie-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close movie details">&times;</button>
+            <div class="modal-body">
+                <!-- Movie details will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+
+    <!-- Analytics (replace with your tracking ID) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
+</body>
+
+</html>
